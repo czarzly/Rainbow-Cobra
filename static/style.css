@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  background-image: url("https://newevolutiondesigns.com/images/freebies/rainbow-wallpaper-4.jpg");
+  #border: red solid 7px;
+  margin: 5px;
+  padding: 30px;
+}
+
+.headline{
+    font-family: Palatino, 'Palatino linotype', serif;
+    color: red;
+    text-align: center;
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.juan {
+  background: pink;
+  border: blue solid 2px;
+
+}
+
+.rob {
+  background-color: pink;
+
+}
+
+.daniela {
+  background-color: pink;
+}
+
+.razgour {
+  background: pink;
+}
+.member_text {
+  position: relative;
+    top: 01%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.member {
+  float: left;
+  width: 24%;
+  height: 555px;
+  border: blue solid 4px;
+}
+
+.member img {
+  width: 100%;
+  height: 40%;
+}
