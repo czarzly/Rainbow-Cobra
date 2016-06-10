@@ -3,7 +3,7 @@
 
 ## Run
 
-  python server.py
+  `python server.py`
 
 ## Todo
 * Create more pages
