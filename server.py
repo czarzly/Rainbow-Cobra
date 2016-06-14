@@ -9,6 +9,4 @@ def root():
     return app.send_static_file('index.html')
 
 if __name__ == "__main__":
-    app.run()
-else:
-    print('nothings')
+     app.run()
