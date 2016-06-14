@@ -6,17 +6,16 @@ body {
   padding: 30px;
 }
 
-  .Video-container {
-    overflow: hidden;
-    width: 100%;
-    height: 150px;
-  }
+`.Video-container {
+  overflow: hidden;
+  width: 100%;
+  height: 150px;
+}
 
-  .Video-container iframe{
-    position: relative;
-    bottom: 1043px;
-
-  }
+.Video-container iframe{
+  position: relative;
+  bottom: 1043px;
+}
 
 .headline{
     font-family: Palatino, 'Palatino linotype', serif;

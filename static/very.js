@@ -1,5 +1,8 @@
-  function very() {
-    console.log("GGHHGGH");
-  }
+function onbuttonclick() {
+  var value = $("input").val();
+  console.log(value);
+}
 
-very();
+$(document).ready(function () {
+  $('button').click(onbuttonclick);
+});
