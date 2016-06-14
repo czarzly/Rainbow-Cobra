@@ -1,6 +1,6 @@
 function onbuttonclick() {
   var value = $("input").val();
-  console.log(value);
+  alert(value);
 }
 
 $(document).ready(function () {
