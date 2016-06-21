@@ -1,8 +1,10 @@
 function onbuttonclick() {
   var value = $("input").val();
-  alert(value);
+  $.post("/contact-us", {key: value});
 }
 
-$(document).ready(function () {
+function onReady() {
   $('button').click(onbuttonclick);
-});
+}
+
+$(document).ready(onReady);
