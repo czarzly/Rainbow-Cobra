@@ -8,7 +8,7 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-client = MongoClient()
+mongo_client = MongoClient()
 
 
 
@@ -24,12 +24,19 @@ def contact():
 def contact_us():
     print(request.values['key'])
     contactinfo = {"hi": request.values['key']}
-    client.rainbow.contacts.insert(contactinfo)
+    mongo_client.rainbow.contacts.insert(contactinfo)
 
-    contactinfo.pop('_id')
-    print(contactinfo)
-    return jsonify(contactinfo)
+    return jsonify({"status": "success"})
 
+@app.route('/contacts-details')
+def contacts_info():
+    def map_contacts(contact):
+        contact.pop("_id")
+        return contact
+    contacts = mongo_client.rainbow.contacts.find()
+    contacts = map(map_contacts, contacts)
+
+    return jsonify({"contacts": contacts})
 
 if __name__ == "__main__":
-     app.run()
+     app.run(debug=True)
