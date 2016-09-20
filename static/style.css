@@ -61,3 +61,27 @@ body {
   width: 100%;
   height: 40%;
 }
+
+.container_boxes {
+  position: absolute;
+  bottom: 0;
+  border: black solid 1px;
+  width: 95%;
+  height: 70px;
+
+
+}
+
+.boxes.about {
+
+}
+
+.boxes {
+  /*position: absolute;*/
+  background: #315C29;
+  float: left;
+  width: 24%;
+  height: 70px;
+  border: black solid 2px;
+  color: white
+}

@@ -16,6 +16,10 @@ mongo_client = MongoClient()
 def root():
     return app.send_static_file('index.html')
 
+@app.route('/about-us')
+def about_us():
+    return app.send_static_file('about.html')
+
 @app.route('/contact')
 def contact():
     return app.send_static_file('contact.html')

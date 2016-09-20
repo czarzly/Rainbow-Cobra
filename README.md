@@ -6,5 +6,6 @@
   `python server.py`
 
 ## Todo
-* Create more pages
-* contact us
+* Create an opening page
+* contact us - make use of the information sent to us
+* build an listening platform
