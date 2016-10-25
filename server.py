@@ -42,5 +42,11 @@ def contacts_info():
 
     return jsonify({"contacts": contacts})
 
+@app.route('/admin')
+def admin():
+    return app.send_static_file('admin.html')
+
+
+
 if __name__ == "__main__":
      app.run(debug=True)
