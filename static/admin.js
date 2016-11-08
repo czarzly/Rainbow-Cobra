@@ -2,7 +2,7 @@
 $.get("contacts-details", function( data ) {
   var html = "";
   data.contacts.forEach(function (contact, i) {
-    var element = "<div> They say " + contact.hi + " </div>";
+    var element = contact.sent_time + "<div> They say " + contact.message + " </div>";
     html = html + element;
   });
 

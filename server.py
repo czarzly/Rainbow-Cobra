@@ -1,4 +1,6 @@
 #! /usr/bin/python
+from datetime import datetime
+now = datetime.now
 
 from flask import Flask, jsonify
 from flask import Response
@@ -9,7 +11,6 @@ from pymongo import MongoClient
 app = Flask(__name__)
 
 mongo_client = MongoClient()
-
 
 
 @app.route('/')
@@ -26,11 +27,19 @@ def contact():
 
 @app.route('/contact-us', methods=["POST"])
 def contact_us():
-    print(request.values['key'])
-    contactinfo = {"hi": request.values['key']}
-    mongo_client.rainbow.contacts.insert(contactinfo)
+    try:
+        
+        contactinfo = {
+            "message": request.values['message'],
+            "sent_time": now()
+        }
 
-    return jsonify({"status": "success"})
+        mongo_client.rainbow.contacts.insert(contactinfo)
+
+        return jsonify({"status": "success"})
+    except Exception as ex:
+        print ex
+        return jsonify({"status": "disaster"})
 
 @app.route('/contacts-details')
 def contacts_info():
